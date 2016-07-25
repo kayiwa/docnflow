@@ -28,6 +28,9 @@ ENV USER=docnow
 VOLUME /home/docnow/dnflow
 WORKDIR /home/docnow/dnflow
 
+# source to activate environment
+RUN /bin/bash -c 'source /opt/docnow/bin/activate'
+
 # install repo requirements
 RUN pip install -r requirements.txt
 
